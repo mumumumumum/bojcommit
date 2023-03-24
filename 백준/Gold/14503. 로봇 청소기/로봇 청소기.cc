@@ -13,11 +13,9 @@ void dfs(int row,int col,int Direction){
         cnt++;
         visited[row][col]=true;
     }
-    //cout<<row<<" "<<col<<" "<<Direction<<" "<<cnt<<"\n";
    
     bool check=false;
     for(int i=0;i<4;i++){
-        //int newDirection=(Direction-1<0) ? Direction=3 : Direction-1;
         if(Direction-1<0)Direction=3;
         else Direction--;
         
@@ -34,8 +32,6 @@ void dfs(int row,int col,int Direction){
         int newDirection = (Direction+2 > 3) ? Direction-2 : Direction+2;
         int r=row+dx[newDirection];
         int c=col+dc[newDirection];
-        //cout<<RobotMap[r][c]<<"\n";
-        //if(r<0||r>=n||c<0||c>=m) return;
         if(RobotMap[r][c]==1) {
             cout<<cnt;
             exit(0);
